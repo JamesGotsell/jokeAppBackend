@@ -13,9 +13,10 @@ app.get('/', (req,res) => {
     res.send('chuck norris joke express api to be used by the frontend')
 });
 
+app.use('/', index);
 
 
-app.get('/v1', index);
+// app.get('/v1', index);
 
 app.use(morgan('combined'))
 
