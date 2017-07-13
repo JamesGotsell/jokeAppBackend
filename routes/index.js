@@ -5,7 +5,7 @@ import jokeController from '../controllers/jokeController';
 const router = Router();
 
 router.get('/', (req, res, next) => {
-    res.render('index', { title: 'chuck norris joke app' });
+    res.send('chuck norris joke app api' );
 });
 
 router.get('/joke', jokeController.jokeCall);

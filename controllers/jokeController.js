@@ -1,6 +1,8 @@
+import request from 'request'
 import Joke from '../models/joke';
+const randomJoke ='https://api.chucknorris.io/jokes/random';
 
-exports.jokeCall = function(req , res){
+exports.jokeCall = (req , res) => {
     request( randomJoke , function(err, body) {
         if (res.statusCode == 200) {
             var parsedBody = JSON.stringify(body.body);
